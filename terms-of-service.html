@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" d=""><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css2.css" rel="stylesheet">
+    <title>Luna Launch</title>
+
+    <link rel="stylesheet" href="./assets/index-DXrY5z_5.css">
+    <link rel="stylesheet" href="./assets/styles-DQqVfxH3.css">
+    <link rel="stylesheet" href="./assets/Nav-BSSNAbSG.css">
+    <link rel="stylesheet" href="./assets/Footer-BFSbDbyr.css">
+    <link rel="stylesheet" href="./assets/PolicyPage-DaYjxvSS.css">
+</head>
+
+<body>
+    <div id="terms-application" style="display: block;">
+        <div class="navigation-wrapper">
+            <a class="brand-logo-wrapper" href="index.html" data-discover="true">
+                <div class="brand-logo-element"><img alt="logo" src="./assets/logo-full.svg"></div>
+            </a>
+            <nav class="primary-navigation"><a class="navigation-link" href="index.html" data-discover="true">Home</a><a class="navigation-link" href="./create-token/" data-discover="true">Create Token</a><a href="./my-portfolio/index.html" class="navigation-link" rel="noopener noreferrer" target="_blank">Liquidity Pool</a><a href="https://raydium.io/swap" class="navigation-link" rel="noopener noreferrer" target="_blank">Manage
+                    Liquidity</a><a href="https://discord.gg/lunalaunch" class="navigation-link" target="_blank" rel="noopener noreferrer">Support</a></nav>
+            <div class="wallet-interface">
+                <div class="wallet-status connect-wallet-btn">Connect Wallet</div>
+            </div>
+        </div>
+        <div id="content-area">
+            <div class="legal-document-container">
+                <h1>Terms of Service</h1>
+                <p class="effective-date">Effective Date: 1st March 2025</p>
+                <div class="legal-clause">
+                    <h2>1. Introduction</h2>
+                    <p>Welcome to Luna Launch. By accessing or using our services, you agree to these Terms of Service.
+                    </p>
+                </div>
+                <div class="legal-clause">
+                    <h2>2. Services</h2>
+                    <p>We provide a platform for launching Solana tokens. We do not guarantee project success or token
+                        valuation.</p>
+                </div>
+                <div class="legal-clause">
+                    <h2>3. User Responsibilities</h2>
+                    <p>You agree not to use our platform for fraudulent or illegal activities. You are responsible for
+                        ensuring compliance with all applicable laws.</p>
+                </div>
+                <div class="legal-clause">
+                    <h2>4. Limitation of Liability</h2>
+                    <p>We are not liable for any financial losses, security breaches, or legal issues arising from your
+                        use of our services.</p>
+                </div>
+                <div class="legal-clause">
+                    <h2>5. Termination</h2>
+                    <p>We reserve the right to suspend or terminate access to our platform for any violation of these
+                        terms.</p>
+                </div>
+                <div class="legal-clause">
+                    <h2>6. Changes to Terms</h2>
+                    <p>We may update these Terms of Service at any time. Continued use of the platform signifies your
+                        acceptance of the changes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-footer">
+            <a class="brand-logo-wrapper" href="index.html" data-discover="true">
+                <div class="brand-logo-element"><img alt="logo" src="./assets/logo-full.svg"></div>
+            </a>
+            <div class="footer-content" select="false">
+                <div class="copyright-section"><span>© Luna Launch 2025</span></div>
+                <div class="legal-links"><a aria-current="page" class="legal-link active" href="" data-discover="true">Terms of Service</a><span class="link-separator"></span><a class="legal-link" href="./privacy-policy.html" data-discover="true">Privacy Policy</a></div>
+            </div>
+            <div class="wallet-interface">
+                <div class="wallet-status connect-wallet-btn">Connect Wallet</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-interface" style="display: none;">
+        <div id="mobile-content">
+            <div class="brand-logo-element"><img alt="logo" src="./assets/logo-full.svg"></div>
+            <span>This app is not supported on mobiles.</span>
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            function checkScreenSize() {
+                const mainContent = document.getElementById('terms-application');
+                const mobileContent = document.getElementById('mobile-interface');
+
+                if (window.innerWidth < 1000) {
+                    mainContent.style.display = 'none';
+                    mobileContent.style.display = 'block';
+                } else {
+                    mainContent.style.display = 'block';
+                    mobileContent.style.display = 'none';
+                }
+            }
+            checkScreenSize();
+
+            // Run on resize  
+            window.addEventListener('resize', checkScreenSize);
+        });
+    </script>
+
+
+</body></html>

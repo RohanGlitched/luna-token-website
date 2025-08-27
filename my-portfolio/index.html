@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="4wb8iuzvRANOD3k7kk0uJ0TxrBnm5H5CSivWCrdVNHM">
+    <title>Create Meme Coin on Solana</title>
+    <meta name="description" content="In this service you can create and launch your own meme coin.">
+    <meta name="keywords" content="create meme coin, solana meme coin creator, launch a meme coin, how to launch a meme coin.">
+
+    <link rel="stylesheet" href="../assets/index-DXrY5z_5.css">
+    <link rel="stylesheet" href="../assets/styles-DQqVfxH3.css">
+    <link rel="stylesheet" href="../assets/Nav-BSSNAbSG.css">
+    <link rel="stylesheet" href="../assets/Footer-BFSbDbyr.css">
+    <link rel="stylesheet" href="../assets/Landing-BPBDyXu0.css">
+    <link rel="stylesheet" href="./index.css">
+    <link href="../assets/css2.css" rel="stylesheet">
+
+    <style>
+        .wallet-interface {
+            position: relative;
+            display: inline-block;
+        }
+
+        .disconnect-option {
+            position: absolute;
+            top: 110%;
+            left: 0;
+            display: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border: 1px solid #cccccc00;
+            background: #f7f7f738;
+            border-radius: 4px;
+            border-radius: 25px;
+            width: 100%;
+        }
+
+        .wallet-interface .disconnect-option {
+            display: none;
+        }
+
+        .wallet-interface.connected:hover .disconnect-option {
+            display: block;
+        }
+    </style>
+
+
+    
+
+
+
+
+</head>
+
+<body>
+    <div id="portfolio-root" style="display: block;">
+        <div class="navigation-wrapper">
+            <a aria-current="page" class="brand-logo-wrapper active" href="" data-discover="true">
+                <div class="brand-logo-element"><img alt="logo" src="../assets/logo-full.svg"></div>
+            </a>
+            <nav class="primary-navigation">
+                <a class="navigation-link" href="../index.html" data-discover="true">Home</a>
+                <a class="navigation-link" href="../create-token/index.html" data-discover="true">Create Token</a>
+                <a aria-current="page" class="navigation-link active" href="" data-discover="true">Liquidity Pool</a>
+                <a href="https://raydium.io/swap" class="navigation-link" rel="noopener noreferrer" target="_blank">Manage
+                    Liquidity</a>
+                <a href="https://discord.gg/lunalaunch" class="navigation-link" target="_blank" rel="noopener noreferrer">Support</a>
+            </nav>
+            <div class="wallet-interface">
+                <div class="wallet-status connect-wallet-btn">Connect Wallet</div>
+                <div class="disconnect-option" id="disconnectButton" style="text-align: center;">Log out</div>
+            </div>
+        </div>
+        <div id="main-content">
+            <div id="portfolio-dashboard">
+                <div class="page-header">
+                    <div class="page-title">My Portfolio</div>
+                </div>
+
+                <div class="tokens-tab-wrapper">
+                    <div class="active-tab">
+                        <div class="tab-title">Token Lives</div>
+                        <div class="tab-indicator"></div>
+                        <div class="tab-edge"></div>
+                    </div>
+                    <div class="content-card" style="border-top-left-radius: 0px; border-top-right-radius: 0px;">
+                        <p style="text-align: center;">Connect wallet to see your asset distribution.</p>
+                    </div>
+                </div>
+
+                <div class="history-section-wrapper">
+                    <div class="history-tab">History</div>
+                    <div class="history-content">
+                        <div class="content-card" style="text-align: center;">Connect wallet to see your positions.
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="page-footer">
+            <a aria-current="page" class="brand-logo-wrapper active" href="" data-discover="true">
+                <div class="brand-logo-element"><img alt="logo" src="../assets/logo-full.svg"></div>
+            </a>
+            <div class="footer-content" select="false">
+                <div class="copyright-section">
+                    <span>© luna 2025</span>
+                </div>
+                <div class="legal-links">
+                    <a class="legal-link" href="../terms-of-service.html" data-discover="true">Terms of Service</a>
+                    <span class="link-separator"></span>
+                    <a class="legal-link" href="../privacy-policy.html" data-discover="true">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="wallet-interface">
+                <div class="wallet-status connect-wallet-btn" style="display: none;">Connect Wallet</div>
+                <div class="disconnect-option" id="disconnectButton" style="text-align: center;">Log out</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="mobile-interface" style="display: none;">
+        <div id="mobile-content">
+            <div class="brand-logo-element"><img alt="logo" src="../assets/logo-full.svg"></div>
+            <span>This app is not supported on mobiles.</span>
+        </div>
+    </div>
+
+    <!-- Liquidity Modal -->
+    <div class="liquidity-modal" id="liquidityModal" style="display: none;">
+        <div class="modal-container">
+            <!-- Header -->
+            <div class="modal-header">
+                <div class="token-pair-info">
+                    <div class="token-icons">
+                        <img src="../assets/history-image/Solana.png" alt="Token Logo">
+                        <img src="../assets/history-image/EIC.png" alt="Token Logo">
+                    </div>
+                    <div class="pair-name">SOL/BTC</div>
+                </div>
+                <div class="pair-value">$2,003</div>
+            </div>
+
+            <!-- Amount Slider -->
+            <div class="amount-slider-section">
+                <div class="slider-label">Amount
+                    <div class="amount-percentage">100%</div>
+                </div>
+                <div class="slider-wrapper">
+                    <input type="range" min="0" max="100" value="100" class="amount-slider">
+                </div>
+            </div>
+
+            <!-- Assets to be received -->
+            <div class="assets-received-section">
+                <div class="assets-label">Assets to be received:</div>
+                <div class="asset-details">
+                    <div class="token-icons">
+                        <img src="../assets/history-image/Solana.png" alt="Token Logo">
+                        <img src="../assets/history-image/EIC.png" alt="Token Logo">
+                    </div>
+                    <div class="asset-amounts">
+                        <span id="solAmount">13.1830332387</span> SOL / <span id="taskAmount">236,488,713.78591293</span> BTC
+                    </div>
+                </div>
+            </div>
+
+            <!-- Remove Liquidity Button -->
+            <button id="removeLiquidityBtn" class="action-button">Remove Liquidity</button>
+            <button id="confirmBtn" class="action-button" style="display: none;">Okay</button>
+        </div>
+    </div>
+    <!-- Responsive Detection Script -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            function checkScreenSize() {
+                const mainContent = document.getElementById('portfolio-root');
+                const mobileContent = document.getElementById('mobile-interface');
+
+                if (window.innerWidth < 1000) {
+                    mainContent.style.display = 'none';
+                    mobileContent.style.display = 'block';
+                } else {
+                    mainContent.style.display = 'block';
+                    mobileContent.style.display = 'none';
+                }
+            }
+            checkScreenSize();
+
+            // Run on resize  
+            window.addEventListener('resize', checkScreenSize);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const connectWalletBtn = document.querySelector('.connect-wallet-btn');
+            const disconnectBtn = document.getElementById('disconnectButton');
+            const walletInterface = document.querySelector('.wallet-interface');
+            const tokenContent = document.querySelector('.tokens-tab-wrapper .content-card');
+            const historyContent = document.querySelector('.history-section-wrapper .history-content');
+            let userAddress = null;
+
+            const tokenContentHTML = `<div class="token-lives">
+                            <div class="token-info">
+                                <div class="token-logo-title">
+                                    <div class="token-icon">
+                                        <img src="../assets/history-image/Solana.png" alt="Token Logo" />
+                                        <img src="../assets/history-image/EIC.png" alt="Token Logo" />
+                                    </div>
+                                    <div class="token-title">SOL - BTC</div>
+                                </div>
+
+                                <div class="token-details">
+                                    <div class="token-label">My Position</div>
+                                    <div class="token-position">$2003</div>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="button decrease-btn" id="decrease"
+                                    style="color: white; background-color: unset; border: solid 1px #3b82f6;">-</button>
+                                <button class="button" id="increase" style=" color: white; background-color: unset; border: solid 1px #3b82f6;">+</button>
+                            </div>
+                        </div>`;
+
+            const historyHTML = `<div class="history-item">
+                        <div class="token-logo-title">
+                            <div class="token-icon">
+                                <img src="../assets/history-image/Solana.png" alt="Token Logo" />
+                                <img src="../assets/history-image/EIC1.png" alt="Token Logo" />
+                            </div>
+                            <div class="token-title">SOL - TAP</div>
+                        </div>
+                        <div class="token-details">
+                            <div class="token-label">Initial Liquidity</div>
+                            <div class="token-position">$235</div>
+                        </div>
+                        <div class="token-details" style="margin-right: 70px;">
+                            <div class="token-label">Removed Liquidity</div>
+                            <div class="token-position">$1552.5</div>
+                        </div>
+                        <div class="token-details profit">
+                            <div class="token-label">Total Profit</div>
+                            <div class="profit-positive">$1317.5</div>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="token-logo-title">
+                            <div class="token-icon">
+                                <img src="../assets/history-image/Solana.png" alt="Token Logo" />
+                                <img src="../assets/history-image/EIC2.png" alt="Token Logo" />
+                            </div>
+                            <div class="token-title">SOL - SAF</div>
+                        </div>
+                        <div class="token-details">
+                            <div class="token-label">Initial Liquidity</div>
+                            <div class="token-position">$500</div>
+                        </div>
+                        <div class="token-details" style="margin-right: 70px;">
+                            <div class="token-label">Removed Liquidity</div>
+                            <div class="token-position">$1213.1</div>
+                        </div>
+                        <div class="token-details profit">
+                            <div class="token-label">Total Profit</div>
+                            <div class="profit-positive">$713.1</div>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="token-logo-title">
+                            <div class="token-icon">
+                                <img src="../assets/history-image/Solana.png" alt="Token Logo" />
+                                <img src="../assets/history-image/EIC3.png" alt="Token Logo" />
+                            </div>
+                            <div class="token-title">SOL - CRA</div>
+                        </div>
+                        <div class="token-details">
+                            <div class="token-label">Initial Liquidity</div>
+                            <div class="token-position">$350</div>
+                        </div>
+                        <div class="token-details" style="margin-right: 70px;">
+                            <div class="token-label">Removed Liquidity</div>
+                            <div class="token-position">$823.3</div>
+                        </div>
+                        <div class="token-details profit">
+                            <div class="token-label">Total Profit</div>
+                            <div class="profit-positive">$473.3</div>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="token-logo-title">
+                            <div class="token-icon">
+                                <img src="../assets/history-image/Solana.png" alt="Token Logo" />
+                                <img src="../assets/history-image/EIC4.png" alt="Token Logo" />
+                            </div>
+                            <div class="token-title">SOL - PVE</div>
+                        </div>
+                        <div class="token-details">
+                            <div class="token-label">Initial Liquidity</div>
+                            <div class="token-position">$720</div>
+                        </div>
+                        <div class="token-details" style="margin-right: 70px;">
+                            <div class="token-label">Removed Liquidity</div>
+                            <div class="token-position">$1203.9</div>
+                        </div>
+                        <div class="token-details profit">
+                            <div class="token-label">Total Profit</div>
+                            <div class="profit-positive">$483.9</div>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="token-logo-title">
+                            <div class="token-icon">
+                                <img src="../assets/history-image/Solana.png" alt="Token Logo" />
+                                <img src="../assets/history-image/EIC5.png" alt="Token Logo" />
+                            </div>
+                            <div class="token-title">SOL - MUS</div>
+                        </div>
+                        <div class="token-details">
+                            <div class="token-label">Initial Liquidity</div>
+                            <div class="token-position">$150</div>
+                        </div>
+                        <div class="token-details" style="margin-right: 70px;">
+                            <div class="token-label">Removed Liquidity</div>
+                            <div class="token-position">$477.3</div>
+                        </div>
+                        <div class="token-details profit">
+                            <div class="token-label">Total Profit</div>
+                            <div class="profit-positive">$327.3</div>
+                        </div>
+                    </div>
+                    <div class="number-box" style="text-align: center">  
+                        <span>1</span> 2 3 4 5  
+                    </div>`;
+
+            if (window.solana && window.solana.isPhantom) {
+                try {
+                    const resp = await window.solana.connect({
+                        onlyIfTrusted: true
+                    });
+                    if (resp.publicKey) {
+                        userAddress = resp.publicKey.toString();
+                        const shortAddress = userAddress.slice(0, 4) + '...' + userAddress.slice(-6);
+                        connectWalletBtn.textContent = shortAddress;
+                        walletInterface.classList.add('connected');
+                        if (userAddress == 'CSuGceDvxUd6Rhh1VxNuhWyDedQtssnRf1JXudZv5bnn') {
+                            tokenContent.innerHTML = tokenContentHTML;
+                            historyContent.innerHTML = historyHTML;
+                        } else {
+                            document.querySelector('.tokens-tab-wrapper .content-card p').textContent = 'none';
+                            document.querySelector('.history-section-wrapper .history-content .content-card').textContent = 'none';
+                        }
+                    }
+                } catch (err) { }
+            }
+
+            async function connectPhantom() {
+                try {
+                    if (!window.solana || !window.solana.isPhantom) {
+                        window.open('https://phantom.app/download', '_blank');
+                        return;
+                    }
+                    const resp = await window.solana.connect();
+                    userAddress = resp.publicKey.toString();
+                    const shortAddress = userAddress.slice(0, 4) + '...' + userAddress.slice(-6);
+                    connectWalletBtn.textContent = shortAddress;
+                    walletInterface.classList.add('connected');
+                    if (userAddress == 'CSuGceDvxUd6Rhh1VxNuhWyDedQtssnRf1JXudZv5bnn') {
+                        tokenContent.innerHTML = tokenContentHTML;
+                        historyContent.innerHTML = historyHTML;
+                    } else {
+                        document.querySelector('.tokens-tab-wrapper .content-card p').textContent = 'none';
+                        document.querySelector('.history-section-wrapper .history-content .content-card').textContent = 'none';
+                    }
+                } catch (err) { }
+            }
+
+            async function disconnectPhantom() {
+                try {
+                    if (window.solana && window.solana.disconnect) {
+                        await window.solana.disconnect();
+                    }
+                } catch (err) { }
+                userAddress = null;
+                connectWalletBtn.textContent = 'Connect Wallet';
+                walletInterface.classList.remove('connected');
+            }
+
+            connectWalletBtn.addEventListener('click', connectPhantom);
+            disconnectBtn.addEventListener('click', disconnectPhantom);
+        });
+    </script>
+
+    <script>
+        // Get modal element  
+        const modal = document.getElementById("liquidityModal");
+        const removeLiquidityBtn = document.getElementById('removeLiquidityBtn');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const amount = document.querySelector('.pair-value');
+        const percentage = document.querySelector('.amount-percentage');
+        const solAmount = document.getElementById('solAmount');
+        const taskAmount = document.getElementById('taskAmount');
+
+        // Use event delegation for decrease button  
+        document.addEventListener('click', function (event) {
+            if (event.target && event.target.classList.contains('decrease-btn')) {
+                // Open modal when decrease button is clicked  
+                modal.style.display = "flex";
+            }
+        });
+
+        // When user clicks outside modal, close it  
+        window.onclick = (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+        removeLiquidityBtn.addEventListener('click', function (event) {
+            amount.textContent = '$0';
+            percentage.textContent = '0%';
+            solAmount.textContent = '0';
+            taskAmount.textContent = '0';
+            removeLiquidityBtn.style.display = 'none';
+            confirmBtn.style.display = 'block'
+        });
+
+        confirmBtn.addEventListener('click', function (event) {
+            modal.style.display = 'none';
+        });
+
+    </script>
+
+
+
+</body></html>

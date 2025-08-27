@@ -1,0 +1,10 @@
+# Ignore Playwright MCP files
+.playwright-mcp/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files
+*.tmp
+*.bak
