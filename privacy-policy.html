@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/Nav-BSSNAbSG.css">
     <link rel="stylesheet" href="./assets/Footer-BFSbDbyr.css">
     <link rel="stylesheet" href="./assets/PolicyPage-DaYjxvSS.css">
+    <link rel="stylesheet" href="./assets/live-chat.css?v=20250130-001">
 </head>
 
 <body>
@@ -368,5 +369,84 @@
         });
     </script>
 
+    <!-- Luna Launch Live Chat Widget -->
+    <div class="luna-chat-widget">
+        <!-- Chat Button -->
+        <div class="luna-chat-button" id="lunaChatButton">
+            <svg class="luna-chat-icon" viewBox="0 0 24 24">
+                <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M6,9H18V11H6M14,14H6V12H14"/>
+            </svg>
+            <div class="luna-chat-badge" id="lunaChatBadge" style="display: none;">1</div>
+        </div>
+
+        <!-- Chat Window -->
+        <div class="luna-chat-window" id="lunaChatWindow">
+            <!-- Header -->
+            <div class="luna-chat-header">
+                <div class="luna-chat-avatar">LS</div>
+                <div class="luna-chat-info">
+                    <h3>Luna Launch Support</h3>
+                    <div class="luna-chat-status">
+                        <span class="luna-status-dot"></span>
+                        Online - We reply instantly
+                    </div>
+                </div>
+                <button class="luna-chat-close" id="lunaChatClose">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Messages Area -->
+            <div class="luna-chat-messages" id="lunaChatMessages">
+                <div class="luna-welcome">
+                    <h4>Welcome to Luna Launch! 👋</h4>
+                    <p>Hi! How can we help you with creating your Solana token?</p>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="luna-typing" id="lunaTyping">
+                <div class="luna-typing-dots">
+                    <div class="luna-typing-dot"></div>
+                    <div class="luna-typing-dot"></div>
+                    <div class="luna-typing-dot"></div>
+                </div>
+                <span style="font-size: 12px; color: #64748b;">Support is typing...</span>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="luna-quick-actions" id="lunaQuickActions">
+                <div class="luna-quick-action" data-message="How do I create a token?">💰 Create Token</div>
+                <div class="luna-quick-action" data-message="What are the fees?">💵 Pricing</div>
+                <div class="luna-quick-action" data-message="Is this secure?">🔒 Security</div>
+                <div class="luna-quick-action" data-message="Technical support needed">🛠️ Tech Support</div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="luna-chat-input-area">
+                <div class="luna-chat-input-container">
+                    <textarea 
+                        class="luna-chat-input" 
+                        id="lunaChatInput" 
+                        placeholder="Type your message..."
+                        rows="1"
+                    ></textarea>
+                    <button class="luna-chat-send" id="lunaChatSend" disabled>
+                        <svg class="luna-send-icon" viewBox="0 0 24 24">
+                            <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Luna Launch Cache Buster -->
+    <script src="./assets/cache-buster.js?v=20250130-001"></script>
+    
+    <!-- Luna Launch Live Chat -->
+    <script src="./assets/live-chat.js?v=20250130-001"></script>
 
 </body></html>
