@@ -8,3 +8,21 @@ Thumbs.db
 # Ignore temporary files
 *.tmp
 *.bak
+
+# Netlify
+.netlify/
+
+# Development
+.vscode/
+.idea/
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.production

@@ -1,0 +1,9 @@
+# Clean URL redirects
+/create-token /create-token/index.html 200
+/my-portfolio /my-portfolio/index.html 200
+
+# API redirects (if needed for future backend)
+/api/* https://api.lunalaunch.com/:splat 200
+
+# Fallback for SPA-like behavior (optional)
+/* /index.html 404
