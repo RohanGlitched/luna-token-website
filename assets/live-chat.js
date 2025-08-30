@@ -511,7 +511,45 @@ document.addEventListener('DOMContentLoaded', function() {
         showNotification: true,
         integrationMode: 'demo' // Change to 'tawk', 'intercom', 'crisp', or 'custom'
     });
+    
+    // Make globally accessible for footer links
+    window.openLunaChat = function() {
+        if (window.lunaChat) {
+            window.lunaChat.openChat();
+        }
+    };
+    
+    window.toggleLunaChat = function() {
+        if (window.lunaChat) {
+            window.lunaChat.toggleChat();
+        }
+    };
 });
+
+// Fallback initialization if DOM already loaded
+if (document.readyState !== 'loading') {
+    // DOM has already loaded
+    if (!window.lunaChat) {
+        window.lunaChat = new LunaChat({
+            supportTeam: 'Luna Launch Support',
+            welcomeMessage: 'Hi! How can we help you with creating your Solana token?',
+            showNotification: true,
+            integrationMode: 'demo'
+        });
+        
+        window.openLunaChat = function() {
+            if (window.lunaChat) {
+                window.lunaChat.openChat();
+            }
+        };
+        
+        window.toggleLunaChat = function() {
+            if (window.lunaChat) {
+                window.lunaChat.toggleChat();
+            }
+        };
+    }
+}
 
 // Export for module systems
 if (typeof module !== 'undefined' && module.exports) {
