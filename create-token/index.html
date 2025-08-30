@@ -316,16 +316,67 @@ baseScript.parentNode.insertBefore(supportScript,baseScript);
             </div>
         </div>
         <div class="page-footer">
-            <a class="brand-logo-wrapper" href="../index.html" data-discover="true">
-                <div class="brand-logo-element"><img alt="logo" src="./assets/logo-full.svg"></div>
-            </a>
-            <div class="footer-content" select="false">
-                <div class="copyright-section"><span>© luna 2025</span></div>
-                <div class="legal-links"><a class="legal-link" href="../terms-of-service.html" data-discover="true">Terms of Service</a><span class="link-separator"></span><a class="legal-link" href="../privacy-policy.html" data-discover="true">Privacy Policy</a></div>
+            <div class="footer-main">
+                <div class="footer-brand-section">
+                    <a class="brand-logo-wrapper" href="../index.html" data-discover="true">
+                        <div class="brand-logo-element"><img alt="Luna Launch Logo" src="./assets/logo-full.svg"></div>
+                    </a>
+                    <p class="footer-description">The world's most powerful Solana token launcher. Create, deploy, and manage your tokens effortlessly.</p>
+                </div>
+                
+                <div class="footer-links-section">
+                    <div class="footer-column">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="../index.html" data-discover="true">Home</a></li>
+                            <li><a href="" data-discover="true">Create Token</a></li>
+                            <li><a href="../my-portfolio/index.html">Liquidity Pool</a></li>
+                            <li><a href="https://raydium.io/swap" target="_blank" rel="noopener noreferrer">Manage Liquidity</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="https://discord.gg/lunalaunch" target="_blank" rel="noopener noreferrer">Discord Community</a></li>
+                            <li><a href="#" onclick="if(window.SupportAPI) SupportAPI.toggle(); return false;">Live Chat</a></li>
+                            <li><a href="https://solscan.io" target="_blank" rel="noopener noreferrer">Blockchain Explorer</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://solana.com" target="_blank" rel="noopener noreferrer">About Solana</a></li>
+                            <li><a href="https://phantom.app" target="_blank" rel="noopener noreferrer">Get Phantom Wallet</a></li>
+                            <li><a href="https://raydium.io" target="_blank" rel="noopener noreferrer">Raydium DEX</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <div class="wallet-interface">
+                            <div class="wallet-status connect-wallet-btn" style="display: none;">Connect Wallet</div>
+                            <div class="disconnect-option" id="disconnectButton" style="text-align: center;">Log out</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="wallet-interface">
-                <div class="wallet-status connect-wallet-btn" style="display: none;">Connect Wallet</div>
-                <div class="disconnect-option" id="disconnectButton" style="text-align: center;">Log out</div>
+            
+            <div class="footer-bottom">
+                <div class="footer-content" select="false">
+                    <div class="copyright-section">
+                        <span>© 2025 Luna Launch. All rights reserved.</span>
+                        <span class="footer-tagline">Powered by Solana Blockchain</span>
+                    </div>
+                    <div class="legal-links">
+                        <a class="legal-link" href="../terms-of-service.html" data-discover="true">Terms of Service</a>
+                        <span class="link-separator">|</span>
+                        <a class="legal-link" href="../privacy-policy.html" data-discover="true">Privacy Policy</a>
+                        <span class="link-separator">|</span>
+                        <a class="legal-link" href="#" onclick="if(window.SupportAPI) SupportAPI.toggle(); return false;">Contact Us</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -520,6 +571,36 @@ baseScript.parentNode.insertBefore(supportScript,baseScript);
             color: #888;
             margin: 0;
             line-height: 1.4;
+        }
+
+        .refund-policy-notice {
+            background: rgba(40, 167, 69, 0.1);
+            border: 1px solid rgba(40, 167, 69, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .refund-policy-notice p {
+            margin: 0 0 8px 0;
+            font-size: 13px;
+            color: #bbb;
+            line-height: 1.4;
+        }
+
+        .refund-policy-notice p:last-child {
+            margin-bottom: 0;
+        }
+
+        .refund-policy-notice strong {
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        .policy-note {
+            font-size: 12px !important;
+            color: #888 !important;
+            font-style: italic;
         }
 
         .loader-overlay {
@@ -737,6 +818,12 @@ baseScript.parentNode.insertBefore(supportScript,baseScript);
                 <button id="checkTransactionBtn" class="check-transaction-btn">Check transaction</button>
                 
                 <p class="transaction-note">After successful transaction click "Check transaction".</p>
+                
+                <div class="refund-policy-notice">
+                    <p><strong>Payment Protection Guarantee:</strong></p>
+                    <p>If you experience any issues with payment processing or token creation, we will automatically refund your payment within 30 minutes. If we fail to process your refund within this timeframe, we guarantee to refund 2x your original payment amount as compensation.</p>
+                    <p class="policy-note">All refunds are processed automatically to your original payment address.</p>
+                </div>
             </div>
         </div>
     </div>
