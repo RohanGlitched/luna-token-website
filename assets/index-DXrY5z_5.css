@@ -95,13 +95,51 @@ body [selectable=true] {
     }
 }
 
-/* Styles for screens less than 1000px */
+/* Responsive styles for mobile devices */
 @media (max-width: 999px) {
     #application-root, #app-container, #portfolio-root, #policy-application, #terms-application {
-        display: none;
+        display: flex !important;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
     }
 
     #mobile-interface {
-        display: block;
+        display: none !important;
+    }
+    
+    body {
+        min-width: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Make all container elements responsive */
+    #primary-content, #main-interface, #main-content, #content-area {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure proper spacing for content under fixed header */
+    #landing-page, .main-content-wrapper {
+        margin-top: 0;
+        padding-top: 2rem;
+    }
+    
+    /* Fix any elements that might be too wide */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
     }
 }

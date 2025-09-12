@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./assets/Nav-BSSNAbSG.css">
     <link rel="stylesheet" href="./assets/Footer-BFSbDbyr.css">
     <link rel="stylesheet" href="./assets/PolicyPage-DaYjxvSS.css">
+    <link rel="stylesheet" href="./assets/mobile-responsive.css">
     <link rel="stylesheet" href="./assets/live-chat.css?v=20250130-001">
 </head>
 
@@ -351,34 +352,6 @@
         </div>
     </div>
 
-    <div id="mobile-interface" style="display: none;">
-        <div id="mobile-content">
-            <div class="brand-logo-element"><img alt="logo" src="./assets/logo-full.svg"></div>
-            <span>This app is not supported on mobiles.</span>
-        </div>
-    </div>
-
-
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            function checkScreenSize() {
-                const mainContent = document.getElementById('policy-application');
-                const mobileContent = document.getElementById('mobile-interface');
-
-                if (window.innerWidth < 1000) {
-                    mainContent.style.display = 'none';
-                    mobileContent.style.display = 'block';
-                } else {
-                    mainContent.style.display = 'block';
-                    mobileContent.style.display = 'none';
-                }
-            }
-            checkScreenSize();
-
-            // Run on resize  
-            window.addEventListener('resize', checkScreenSize);
-        });
-    </script>
 
     <!-- Luna Launch Live Chat Widget -->
     <div class="luna-chat-widget">

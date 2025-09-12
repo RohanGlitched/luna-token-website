@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../assets/Nav-BSSNAbSG.css">
     <link rel="stylesheet" href="../assets/Footer-BFSbDbyr.css">
     <link rel="stylesheet" href="../assets/Landing-BPBDyXu0.css">
+    <link rel="stylesheet" href="../assets/mobile-responsive.css">
     <link rel="stylesheet" href="./index.css">
     <link href="../assets/css2.css" rel="stylesheet">
 
@@ -130,12 +131,6 @@
 
     </div>
 
-    <div id="mobile-interface" style="display: none;">
-        <div id="mobile-content">
-            <div class="brand-logo-element"><img alt="logo" src="../assets/logo-full.svg"></div>
-            <span>This app is not supported on mobiles.</span>
-        </div>
-    </div>
 
     <!-- Liquidity Modal -->
     <div class="liquidity-modal" id="liquidityModal" style="display: none;">
@@ -182,26 +177,6 @@
         </div>
     </div>
     <!-- Responsive Detection Script -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            function checkScreenSize() {
-                const mainContent = document.getElementById('portfolio-root');
-                const mobileContent = document.getElementById('mobile-interface');
-
-                if (window.innerWidth < 1000) {
-                    mainContent.style.display = 'none';
-                    mobileContent.style.display = 'block';
-                } else {
-                    mainContent.style.display = 'block';
-                    mobileContent.style.display = 'none';
-                }
-            }
-            checkScreenSize();
-
-            // Run on resize  
-            window.addEventListener('resize', checkScreenSize);
-        });
-    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', async () => {

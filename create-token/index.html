@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="./assets/Nav-BSSNAbSG.css">
     <link rel="stylesheet" href="./assets/Footer-BFSbDbyr.css">
     <link rel="stylesheet" href="./assets/CreateToken-CY8WSv_N.css">
+    <link rel="stylesheet" href="../assets/mobile-responsive.css">
     <link rel="stylesheet" href="../assets/live-chat.css?v=20250130-001">
 
     <style>
@@ -382,12 +383,6 @@ baseScript.parentNode.insertBefore(supportScript,baseScript);
         </div>
     </div>
 
-    <div id="mobile-interface" style="display: none;">
-        <div id="mobile-content">
-            <div class="brand-logo-element"><img alt="logo" src="./assets/logo-full.svg"></div>
-            <span>This app is not supported on mobiles.</span>
-        </div>
-    </div>
 
     <!-- All the modal styles and JavaScript from the original page -->
     <style>
@@ -869,25 +864,6 @@ baseScript.parentNode.insertBefore(supportScript,baseScript);
     </div>
 
     <!-- All JavaScript from original page -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            function checkScreenSize() {
-                const mainContent = document.getElementById('app-container');
-                const mobileContent = document.getElementById('mobile-interface');
-
-                if (window.innerWidth < 1000) {
-                    mainContent.style.display = 'none';
-                    mobileContent.style.display = 'block';
-                } else {
-                    mainContent.style.display = 'block';
-                    mobileContent.style.display = 'none';
-                }
-            }
-            checkScreenSize();
-
-            window.addEventListener('resize', checkScreenSize);
-        });
-    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', async () => {

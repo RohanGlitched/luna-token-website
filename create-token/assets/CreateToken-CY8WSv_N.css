@@ -932,3 +932,41 @@
 .recipient-section .input-field .field-input::placeholder {
     color: #8a8a8a;
 }
+
+/* Mobile responsive styles for CreateToken page */
+@media (max-width: 999px) {
+    .toggle-section .toggle-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .toggle-section .toggle-section-header .toggle-header-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .recipient-section .input-field .field-input {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Make any modals mobile-friendly */
+    .modal-container {
+        width: 95% !important;
+        max-width: 95% !important;
+        margin: 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .toggle {
+        width: 2rem;
+        height: 1.2rem;
+    }
+    
+    .recipient-section .input-field .field-input {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+}
