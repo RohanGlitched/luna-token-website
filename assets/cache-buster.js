@@ -5,7 +5,7 @@
 
 class LunaCacheBuster {
     constructor() {
-        this.version = '20250130-001';
+        this.version = '20250130-002';
         this.init();
     }
 
