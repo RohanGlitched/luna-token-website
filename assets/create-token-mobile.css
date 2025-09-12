@@ -725,9 +725,13 @@
         height: 100% !important;
         overflow: auto !important;
         background-color: rgba(0, 0, 0, 0.85) !important;
-        display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+    }
+    
+    /* Only show modal with flex layout when it has display: flex inline style */
+    .modal[style*="display: flex"] {
+        display: flex !important;
     }
 
     .modal-content {
