@@ -3,7 +3,9 @@
     "allow": [
       "mcp__playwright__browser_navigate",
       "Bash(git add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_evaluate"
     ],
     "deny": [],
     "ask": []
