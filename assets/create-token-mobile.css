@@ -1,0 +1,740 @@
+/* CREATE TOKEN PAGE - MOBILE SPECIFIC FIXES */
+
+@media screen and (max-width: 999px) {
+    
+    /* MAIN CONTAINER FIXES */
+    #app-container {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* NAVIGATION OVERRIDES FOR CREATE TOKEN PAGE */
+    .navigation-wrapper {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        background: rgba(1, 1, 1, 0.98) !important;
+        backdrop-filter: blur(10px) !important;
+        z-index: 9999 !important;
+        padding: 12px 16px !important;
+        border-bottom: 1px solid #333 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        height: 60px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .navigation-wrapper .brand-logo-wrapper {
+        flex-shrink: 0 !important;
+        z-index: 10000 !important;
+        height: 32px !important;
+    }
+    
+    .navigation-wrapper .brand-logo-wrapper .brand-logo-element img {
+        height: 32px !important;
+        width: auto !important;
+    }
+    
+    /* Mobile Menu Toggle Positioning */
+    .mobile-menu-toggle {
+        order: 2 !important;
+        margin-left: auto !important;
+        margin-right: 12px !important;
+    }
+    
+    /* Wallet Interface Positioning */
+    .navigation-wrapper .wallet-interface {
+        order: 3 !important;
+        flex-shrink: 0 !important;
+    }
+    
+    #main-interface {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    #token-creator {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* PAGE HEADER */
+    .header-section {
+        padding: 20px 16px !important;
+        text-align: center !important;
+        background: transparent !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    .page-title {
+        font-size: 20px !important;
+        margin: 8px 0 !important;
+        line-height: 1.3 !important;
+        color: #fff !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+    
+    .page-description {
+        font-size: 14px !important;
+        margin: 12px 0 !important;
+        line-height: 1.5 !important;
+        padding: 0 8px !important;
+        color: #aaa !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+    }
+
+    /* FORM CONTAINER */
+    .token-creation-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* INPUT SECTIONS */
+    .input-section {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 0 20px 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    /* INPUT FIELDS */
+    .input-field {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* FORM LABELS */
+    .input-label {
+        display: block !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        margin: 0 !important;
+        color: #fff !important;
+    }
+
+    /* ACTUAL INPUT ELEMENTS */
+    .field-input {
+        width: 100% !important;
+        padding: 16px !important;
+        font-size: 16px !important;
+        border: 2px solid #333 !important;
+        border-radius: 8px !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        color: #fff !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        transition: border-color 0.3s ease !important;
+    }
+
+    .field-input:focus {
+        border-color: #6B5FF6 !important;
+        outline: none !important;
+        box-shadow: 0 0 0 3px rgba(107, 95, 246, 0.1) !important;
+    }
+
+    .field-input::placeholder {
+        color: #666 !important;
+        opacity: 1 !important;
+    }
+
+    /* INPUT CONSTRAINTS/DESCRIPTIONS */
+    .input-constraint {
+        font-size: 12px !important;
+        color: #888 !important;
+        margin: 0 !important;
+        line-height: 1.4 !important;
+    }
+
+    /* LOGO UPLOAD SECTION */
+    .logo-upload-wrapper {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        margin: 0 !important;
+    }
+
+    .logo-upload-box {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .upload-label {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        color: #fff !important;
+        margin: 0 !important;
+    }
+
+    .image-upload-interface {
+        width: 100% !important;
+        padding: 40px 20px !important;
+        border: 2px dashed #555 !important;
+        border-radius: 12px !important;
+        text-align: center !important;
+        background: rgba(255, 255, 255, 0.02) !important;
+        cursor: pointer !important;
+        transition: border-color 0.3s ease !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+        position: relative !important;
+    }
+
+    .image-upload-interface:hover {
+        border-color: #6B5FF6 !important;
+        background: rgba(107, 95, 246, 0.05) !important;
+    }
+
+    .image-upload-interface .material-symbols-rounded {
+        font-size: 32px !important;
+        color: #666 !important;
+    }
+
+    .upload-text-1 {
+        font-size: 16px !important;
+        color: #fff !important;
+        margin: 0 !important;
+    }
+
+    .upload-text-2 {
+        font-size: 13px !important;
+        color: #888 !important;
+        margin: 0 !important;
+    }
+
+    .form-img {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 0 !important;
+        cursor: pointer !important;
+    }
+
+    /* AI LOGO GENERATION */
+    .ai-logo-generation {
+        width: 100% !important;
+        padding: 16px !important;
+        background: rgba(255, 255, 255, 0.02) !important;
+        border: 1px solid #333 !important;
+        border-radius: 12px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .ai-generation-wrapper {
+        display: flex !important;
+        justify-content: center !important;
+        margin: 12px 0 !important;
+    }
+
+    .ai-generation-container {
+        width: 80px !important;
+        height: 80px !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .ai-generation-container img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .ai-generation-controls {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+        text-align: center !important;
+    }
+
+    .ai-generate-button {
+        padding: 12px 24px !important;
+        background: rgba(107, 95, 246, 0.2) !important;
+        border: 1px solid #6B5FF6 !important;
+        border-radius: 8px !important;
+        color: #6B5FF6 !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .ai-generate-button:hover {
+        background: rgba(107, 95, 246, 0.3) !important;
+    }
+
+    /* FEATURE TOGGLE SECTIONS */
+    .feature-toggle {
+        width: 100% !important;
+        padding: 16px !important;
+        margin: 0 0 16px 0 !important;
+        background: rgba(255, 255, 255, 0.02) !important;
+        border: 1px solid #333 !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    .toggle-header {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin-bottom: 12px !important;
+    }
+
+    .toggle-left-section {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        gap: 12px !important;
+    }
+
+    .toggle-title {
+        font-size: 16px !important;
+        margin: 0 !important;
+        color: #fff !important;
+        flex: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .new-feature-badge {
+        font-size: 10px !important;
+        padding: 2px 6px !important;
+        background: #ff6b35 !important;
+        color: white !important;
+        border-radius: 4px !important;
+        font-weight: 600 !important;
+    }
+
+    .toggle-price {
+        font-size: 14px !important;
+        padding: 4px 12px !important;
+        background: rgba(107, 95, 246, 0.2) !important;
+        border: 1px solid #6B5FF6 !important;
+        border-radius: 16px !important;
+        color: #6B5FF6 !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+
+    .toggle-description {
+        font-size: 13px !important;
+        color: #aaa !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    /* TOGGLE SWITCH */
+    .toggle-switch {
+        width: 48px !important;
+        height: 24px !important;
+        border-radius: 24px !important;
+        background: #333 !important;
+        border: 2px solid #555 !important;
+        position: relative !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        flex-shrink: 0 !important;
+    }
+
+    .toggle-switch[data-toggled="true"] {
+        background: #6B5FF6 !important;
+        border-color: #6B5FF6 !important;
+    }
+
+    .toggle-indicator {
+        position: absolute !important;
+        width: 16px !important;
+        height: 16px !important;
+        background: white !important;
+        border-radius: 50% !important;
+        top: 2px !important;
+        left: 2px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .toggle-switch[data-toggled="true"] .toggle-indicator {
+        transform: translateX(24px) !important;
+    }
+
+    /* TOGGLE SECTION BODY */
+    .toggle-section-body {
+        width: 100% !important;
+        margin-top: 16px !important;
+    }
+
+    .toggle-section-body > div {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    /* SECTION DIVIDER */
+    .section-divider {
+        width: 100% !important;
+        height: 1px !important;
+        background: #333 !important;
+        margin: 32px 0 !important;
+    }
+
+    /* TOGGLE SWITCH */
+    .toggle,
+    .toggle-switch {
+        width: 48px !important;
+        height: 24px !important;
+        border-radius: 24px !important;
+        background: #333 !important;
+        border: 2px solid #555 !important;
+        position: relative !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        flex-shrink: 0 !important;
+    }
+
+    .toggle.active,
+    .toggle-switch.active {
+        background: #6B5FF6 !important;
+        border-color: #6B5FF6 !important;
+    }
+
+    .toggle::before,
+    .toggle-switch::before {
+        content: '' !important;
+        position: absolute !important;
+        width: 16px !important;
+        height: 16px !important;
+        background: white !important;
+        border-radius: 50% !important;
+        top: 2px !important;
+        left: 2px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .toggle.active::before,
+    .toggle-switch.active::before {
+        transform: translateX(24px) !important;
+    }
+
+    /* UPLOAD AREA */
+    .upload-area,
+    .file-upload-area,
+    .drop-zone {
+        width: 100% !important;
+        padding: 40px 20px !important;
+        border: 2px dashed #555 !important;
+        border-radius: 12px !important;
+        text-align: center !important;
+        background: rgba(255, 255, 255, 0.02) !important;
+        margin: 16px 0 !important;
+        transition: border-color 0.3s ease !important;
+        cursor: pointer !important;
+    }
+
+    .upload-area:hover,
+    .file-upload-area:hover,
+    .drop-zone:hover {
+        border-color: #6B5FF6 !important;
+        background: rgba(107, 95, 246, 0.05) !important;
+    }
+
+    .upload-icon {
+        font-size: 32px !important;
+        margin-bottom: 12px !important;
+        color: #666 !important;
+    }
+
+    .upload-text {
+        font-size: 16px !important;
+        color: #fff !important;
+        margin-bottom: 8px !important;
+    }
+
+    .upload-subtext {
+        font-size: 13px !important;
+        color: #888 !important;
+    }
+
+    /* BUTTONS */
+    .btn,
+    .button,
+    button,
+    .launch-button,
+    .create-button {
+        width: 100% !important;
+        padding: 18px 24px !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        border: none !important;
+        border-radius: 12px !important;
+        background: linear-gradient(135deg, #6B5FF6 0%, #9B59B6 100%) !important;
+        color: white !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        margin: 16px 0 !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+    }
+
+    .btn:hover,
+    .button:hover,
+    button:hover,
+    .launch-button:hover,
+    .create-button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(107, 95, 246, 0.3) !important;
+    }
+
+    .btn:active,
+    .button:active,
+    button:active {
+        transform: translateY(0) !important;
+    }
+
+    /* SECONDARY BUTTONS */
+    .btn-secondary,
+    .button-secondary {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 2px solid #555 !important;
+        color: #fff !important;
+    }
+
+    .btn-secondary:hover,
+    .button-secondary:hover {
+        background: rgba(255, 255, 255, 0.15) !important;
+        border-color: #6B5FF6 !important;
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* PRICING SECTION */
+    .pricing-section,
+    .fee-summary {
+        width: 100% !important;
+        padding: 20px 16px !important;
+        background: rgba(107, 95, 246, 0.1) !important;
+        border: 1px solid #6B5FF6 !important;
+        border-radius: 12px !important;
+        margin: 20px 0 !important;
+        text-align: center !important;
+    }
+
+    .total-fees,
+    .fee-breakdown {
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        color: #6B5FF6 !important;
+        margin: 0 !important;
+    }
+
+    .fee-details {
+        font-size: 14px !important;
+        color: #aaa !important;
+        margin: 8px 0 0 0 !important;
+    }
+
+    /* TWO-COLUMN LAYOUT ON LARGER MOBILES */
+    @media screen and (min-width: 480px) {
+        .form-row {
+            display: flex !important;
+            gap: 16px !important;
+            width: 100% !important;
+        }
+
+        .form-row .form-section {
+            flex: 1 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    /* RECIPIENT SECTION */
+    .recipient-section {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 20px 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .recipient-section .input-field {
+        width: 100% !important;
+    }
+
+    .recipient-section .field-input {
+        font-family: monospace !important;
+        font-size: 14px !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    /* LAUNCH BUTTON SECTION */
+    .launch-section,
+    .submit-section {
+        width: 100% !important;
+        padding: 20px 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .launch-token-button,
+    .submit-button,
+    button[type="submit"] {
+        width: 100% !important;
+        max-width: 300px !important;
+        padding: 18px 24px !important;
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        border: none !important;
+        border-radius: 12px !important;
+        background: linear-gradient(135deg, #6B5FF6 0%, #9B59B6 100%) !important;
+        color: white !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+    }
+
+    .launch-token-button:hover,
+    .submit-button:hover,
+    button[type="submit"]:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 12px 30px rgba(107, 95, 246, 0.4) !important;
+    }
+
+    .launch-token-button:active,
+    .submit-button:active,
+    button[type="submit"]:active {
+        transform: translateY(-1px) !important;
+    }
+
+    /* PRICING DISPLAY */
+    .fee-display,
+    .pricing-display {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 16px !important;
+        background: rgba(107, 95, 246, 0.1) !important;
+        border: 1px solid #6B5FF6 !important;
+        border-radius: 12px !important;
+        width: 100% !important;
+        max-width: 300px !important;
+        text-align: center !important;
+    }
+
+    .fee-label {
+        font-size: 14px !important;
+        color: #aaa !important;
+        margin: 0 !important;
+    }
+
+    .fee-amount {
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        color: #6B5FF6 !important;
+        margin: 0 !important;
+    }
+
+    .fee-breakdown {
+        font-size: 12px !important;
+        color: #888 !important;
+        margin: 0 !important;
+    }
+
+    /* HIDE COMPLEX BACKGROUNDS ON MOBILE */
+    .background-decoration,
+    .complex-bg,
+    .parallax-bg {
+        display: none !important;
+    }
+}
+
+/* VERY SMALL SCREENS */
+@media screen and (max-width: 380px) {
+    .form-container,
+    .token-form {
+        padding: 0 12px !important;
+    }
+
+    .form-section,
+    .toggle-section {
+        padding: 16px 12px !important;
+    }
+
+    .upload-area {
+        padding: 30px 15px !important;
+    }
+
+    .toggle-section h3 {
+        font-size: 15px !important;
+    }
+
+    .btn,
+    .button {
+        padding: 16px 20px !important;
+        font-size: 15px !important;
+    }
+}
