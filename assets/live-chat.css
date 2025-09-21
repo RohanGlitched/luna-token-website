@@ -81,9 +81,9 @@
 
 /* Chat Window */
 .luna-chat-window {
-    position: absolute;
-    bottom: 80px;
-    right: 0;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
     width: 380px;
     height: 500px;
     background: #ffffff;
@@ -95,6 +95,7 @@
     transform: translateY(20px) scale(0.95);
     opacity: 0;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: calc(100vw - 40px);
 }
 
 .luna-chat-window.active {
